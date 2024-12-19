@@ -44,6 +44,7 @@ backToTopButton.addEventListener('click', () => {
   });
 });
 
+new WOW().init();
 new WOW({
   boxClass: 'wow',       // Animatsiya qo'llanadigan sinf
   animateClass: 'animate__animated', // Animate.css uchun asosiy sinf
@@ -51,11 +52,6 @@ new WOW({
   mobile: true,          // Mobil qurilmalarda ham ishlash
   live: true             // DOM o'zgartirilganda yangi elementlarni avtomatik qo'shish
 }).init();
-
-
-
-
-
 
 // Scroll foizini aniqlash va animatsiyani faollashtirish
 const handleScroll = () => {
@@ -74,3 +70,14 @@ const handleScroll = () => {
 // Scroll va yuklanish hodisalari
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);
+// ------------------------------------------//
+window.addEventListener('load', function() {
+  const loaderWrapper = document.querySelector('.loader-wrapper');
+  const content = document.querySelector('.content');
+
+  // Loader tugagach, sahifa tarkibini ko'rsatish
+  loaderWrapper.addEventListener('animationend', function() {
+    loaderWrapper.style.display = 'none'; // Loader'ni yashirish
+    content.classList.add('show'); // Sahifa tarkibini ko'rsatish
+  });
+});
