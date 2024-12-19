@@ -46,11 +46,11 @@ backToTopButton.addEventListener('click', () => {
 
 new WOW().init();
 new WOW({
-  boxClass: 'wow',       // Animatsiya qo'llanadigan sinf
-  animateClass: 'animate__animated', // Animate.css uchun asosiy sinf
-  offset: 80,           // Animatsiya faollashishidan oldin elementdan masofa (px)
-  mobile: true,          // Mobil qurilmalarda ham ishlash
-  live: true             // DOM o'zgartirilganda yangi elementlarni avtomatik qo'shish
+  boxClass: 'wow',       
+  animateClass: 'animate__animated', 
+  offset: 80,      
+  mobile: true,       
+  live: true             
 }).init();
 
 // Scroll foizini aniqlash va animatsiyani faollashtirish
@@ -59,10 +59,10 @@ const handleScroll = () => {
 
   sections.forEach(section => {
     const sectionTop = section.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight * 0.5; // Ekranning o'rtasi (50%)
+    const triggerPoint = window.innerHeight * 0.5; 
 
     if (sectionTop < triggerPoint && scrollPercent >= 50) {
-      section.classList.add('show'); // Animatsiya qo'shiladi
+      section.classList.add('show'); 
     }
   });
 };
@@ -77,7 +77,9 @@ window.addEventListener('load', function() {
 
   // Loader tugagach, sahifa tarkibini ko'rsatish
   loaderWrapper.addEventListener('animationend', function() {
-    loaderWrapper.style.display = 'none'; // Loader'ni yashirish
-    content.classList.add('show'); // Sahifa tarkibini ko'rsatish
+    loaderWrapper.style.display = 'none'; 
+    // content.classList.add('show'); 
   });
 });
+
+
