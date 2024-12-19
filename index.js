@@ -1,0 +1,76 @@
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+let sections = document.querySelectorAll('.section');
+let navLinks = document.querySelectorAll('header nav a');
+
+window.onscroll = ()=>{
+    sections.forEach(sec =>{
+        let top = window.scrollY;
+        let offset = sec.offsetTop = 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links =>{
+                links.classList.remove('active');
+                document.querySelector('header nav a [href*=' + id + ']').classList.add('active');
+            })
+        }
+    })
+}
+
+menuIcon.onclick = () =>{
+    menuIcon.classList.toggle('bx-x')
+    navbar.classList.toggle('active')
+}
+
+// Tugma elementi
+const backToTopButton = document.getElementById('backToTop');
+
+// Sahifa scroll bo'lganda tugmani ko'rsatish
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+// Tugmaga bosilganda yuqoriga qaytish
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
+
+new WOW({
+  boxClass: 'wow',       // Animatsiya qo'llanadigan sinf
+  animateClass: 'animate__animated', // Animate.css uchun asosiy sinf
+  offset: 80,           // Animatsiya faollashishidan oldin elementdan masofa (px)
+  mobile: true,          // Mobil qurilmalarda ham ishlash
+  live: true             // DOM o'zgartirilganda yangi elementlarni avtomatik qo'shish
+}).init();
+
+
+
+
+
+
+// Scroll foizini aniqlash va animatsiyani faollashtirish
+const handleScroll = () => {
+  const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight * 0.5; // Ekranning o'rtasi (50%)
+
+    if (sectionTop < triggerPoint && scrollPercent >= 50) {
+      section.classList.add('show'); // Animatsiya qo'shiladi
+    }
+  });
+};
+
+// Scroll va yuklanish hodisalari
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
