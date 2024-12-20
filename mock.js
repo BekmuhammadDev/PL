@@ -1,0 +1,17 @@
+export const projectData = [
+    { title: "Project 1", description: "Description for project 1", imageUrl: "assets/images/zetmarket.png" },
+    { title: "Project 2", description: "Description for project 2", imageUrl: "https://via.placeholder.com/300/33FF57" },
+    { title: "Project 3", description: "Description for project 3", imageUrl: "https://via.placeholder.com/300/3357FF" },
+    { title: "Project 4", description: "Description for project 4", imageUrl: "https://via.placeholder.com/300/57FF33" },
+    { title: "Project 5", description: "Description for project 5", imageUrl: "https://via.placeholder.com/300/5733FF" },
+    { title: "Project 6", description: "Description for project 6", imageUrl: "https://via.placeholder.com/300/FF33A6" },
+    { title: "Project 7", description: "Description for project 7", imageUrl: "https://via.placeholder.com/300/FFC133" },
+    { title: "Project 8", description: "Description for project 8", imageUrl: "https://via.placeholder.com/300/33A6FF" },
+    { title: "Project 9", description: "Description for project 9", imageUrl: "https://via.placeholder.com/300/FF5733" },
+    { title: "Project 10", description: "Description for project 10", imageUrl: "https://via.placeholder.com/300/FF33FF" },
+    { title: "Project 11", description: "Description for project 11", imageUrl: "https://via.placeholder.com/300/A633FF" },
+    { title: "Project 12", description: "Description for project 12", imageUrl: "https://via.placeholder.com/300/FF5733" },
+    { title: "Project 13", description: "Description for project 13", imageUrl: "https://via.placeholder.com/300/FF6347" },
+    { title: "Project 14", description: "Description for project 14", imageUrl: "https://via.placeholder.com/300/3FF573" },
+    { title: "Project 15", description: "Description for project 15", imageUrl: "https://via.placeholder.com/300/5733FF" },
+  ];

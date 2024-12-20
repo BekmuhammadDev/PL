@@ -420,7 +420,7 @@ span {
 
 .services-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat( 1fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -464,6 +464,75 @@ span {
     line-height: 1.7;
     margin: auto;
 }
+
+/* ////////////////////////////////////////////////// */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 ta column */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Maksimal o'lchamni cheklash */
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 30px var(--main-color);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    z-index: 20;
+  }
+  
+  .card-description {
+    font-size: 26px;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .card-button {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s;
+    font-size: 16px;
+  }
+  
+  .card:hover .card-button {
+    bottom: 20px;
+    opacity: 1;
+  }
+  
+  .card-button:hover {
+    background-color: #0056b3;
+  }
+/* ////////////////////////////////////////////////// */
 
 .testimonials {
     background: var(--second-bg-color);
