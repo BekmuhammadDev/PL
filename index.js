@@ -3,6 +3,18 @@ let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('.section');
 let navLinks = document.querySelectorAll('header nav a');
 
+document.getElementById('downloadCv').addEventListener('click', function () {
+  // Fayl URL-manzili
+  const resumeUrl = './assets/Cv/Cv.pdf'; // Fayl manzilingizni to'g'ri ko'rsating
+
+  // Faylni yuklab olish uchun link yaratish
+  const link = document.createElement('a');
+  link.href = resumeUrl;
+  link.download = 'Resume.pdf'; // Yuklangan fayl nomi
+  link.click(); // Linkni bosish orqali faylni yuklash
+});
+
+
 window.onscroll = ()=>{
     sections.forEach(sec =>{
         let top = window.scrollY;
@@ -81,5 +93,4 @@ window.addEventListener('load', function() {
     // content.classList.add('show'); 
   });
 });
-
 

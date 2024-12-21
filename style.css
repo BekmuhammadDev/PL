@@ -184,6 +184,31 @@ span {
     cursor: pointer;
 }
 
+.cvbtn button {
+    background: linear-gradient(90deg, #007BFF, #00D4FF); /* Gradient fon */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .cvbtn button:hover {
+    background: linear-gradient(90deg, #00D4FF, #007BFF);
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 8px rgba(0, 123, 255, 0.6);
+  }
+  
+  .cvbtn button:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 4px rgba(0, 123, 255, 0.4);
+  }
+  
+
 .btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 50px var(--main-color);
