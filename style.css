@@ -656,7 +656,7 @@ span {
     width: 100%;
     padding: 2.5rem;
     font-size: 1.8rem;
-    color: var(--text-color);
+    color: black;
     background: var(--);
     border-radius: 2rem;
     border: 2px solid var(--main-color);
@@ -923,6 +923,13 @@ span {
     .list h1{
         font-size: 16px;
     }
+
+    .card-button{
+        font-size: 10px;
+        margin-top: 1rem;
+        text-align: center;
+        padding: 15px 25px;
+    }
 }
 
 @media(max-width:370px){
@@ -934,6 +941,13 @@ span {
 
     .list h1{
         font-size: 16px;
+    }
+
+    .card-button{
+        font-size: 10px;
+        margin-top: 1rem;
+        text-align: center;
+        padding: 15px 25px;
     }
 
 }
