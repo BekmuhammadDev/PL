@@ -528,7 +528,7 @@ span {
   
   .card-description {
     font-size: 26px;
-    color: #666;
+    color: #000;
     margin-bottom: 20px;
     font-weight: 700;
   }
@@ -543,6 +543,7 @@ span {
     position: absolute;
     bottom: -50px;
     left: 50%;
+    border: 2px solid var(--main-color);
     transform: translateX(-50%);
     opacity: 0;
     transition: all 0.3s;
@@ -555,7 +556,8 @@ span {
   }
   
   .card-button:hover {
-    background-color: #0056b3;
+    background-color: var(--main-color);
+    color: #000;
   }
 /* ////////////////////////////////////////////////// */
 
@@ -738,10 +740,25 @@ span {
         font-size: 55%;
     }
 
+    .services{
+        padding: 88px 60px
+    }
+
     .services-container {
         padding-bottom: 7rem;
-        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+        grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
+    }
+
+    .service-info {
+        width: 90%;
+        padding: 2rem;
+        font-size: 1.4rem;
+    }
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1rem auto
     }
 }
 
@@ -765,6 +782,7 @@ span {
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
         padding-left: 37px;
+        padding-right: 0;
     }
 
     .timeline-dot {
@@ -785,6 +803,16 @@ span {
 
     .footer {
         padding: 2rem 3%;
+    }
+
+    .service-info {
+        width: 95%;
+        padding: 1.5rem;
+        font-size: 1.2rem;
+    }
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0.8rem auto;
     }
 }
 
@@ -841,12 +869,64 @@ span {
         width: 56vw;
     }
 
+    .services{
+        padding: 0;
+    }
+
     .services h2 {
         margin-bottom: 3rem;
     }
 
     .services-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-info {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    .projects-container {
+        grid-template-columns: repeat(3,1fr);
+        margin: 0.5rem auto;
+    }
+}
+
+@media(max-width:490px) {
+    .services{
+        padding: 35px;
+    }
+
+    .services h2 {
+        margin-bottom: 3rem;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-info {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    .projects-container {
+        grid-template-columns: repeat(1,1fr);
+        margin: 0.5rem auto;
+    }
+
+    .card{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+}
+
+@media(max-width:370px){
+
+    .card{
+        width: 100%;
+        margin-bottom: 1rem;
     }
 }
 /* Back to Top tugmasining uslubi */

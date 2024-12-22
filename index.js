@@ -1,3 +1,30 @@
+// Barcha card elementlarini olish
+const cards = document.querySelectorAll('.card');
+
+// Har bir kartaga turli xil fon rasmlari
+const bgImages = [
+  'url("./assets/img/uzb-old.png")',
+  'url("./assets/img/hajjumrah.png")',
+  'url("./assets/img/assistant-ai.png")',
+  'url("./assets/img/chip-dip.png")',
+  'url("./assets/img/about-me.png")',
+  'url("./assets/img/dashboard.png")',
+  'url("./assets/img/zetmarket.png")',
+  'url("./assets/img/Rent car.png")',
+  'url("/assets/img/namoz vaqtlari.png")',
+  'url("/assets/img/movies.png")',
+  'url("/assets/img/todo-app.png")',
+  'url("/assets/img/next-store.png")'
+];
+
+// Har bir kartaga fon rasmini qo‘llash
+cards.forEach((card, index) => {
+  card.style.backgroundImage = bgImages[index];
+  card.style.backgroundSize = 'cover';
+  card.style.backgroundPosition = 'center';
+});
+
+// Navbar, menu icon va sahifa hodisalari
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('.section');
@@ -14,27 +41,26 @@ document.getElementById('downloadCv').addEventListener('click', function () {
   link.click(); // Linkni bosish orqali faylni yuklash
 });
 
+window.onscroll = () => {
+  sections.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
 
-window.onscroll = ()=>{
-    sections.forEach(sec =>{
-        let top = window.scrollY;
-        let offset = sec.offsetTop = 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach(links => {
+        links.classList.remove('active');
+        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+      });
+    }
+  });
+};
 
-        if (top >= offset && top < offset + height) {
-            navLinks.forEach(links =>{
-                links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ']').classList.add('active');
-            })
-        }
-    })
-}
-
-menuIcon.onclick = () =>{
-    menuIcon.classList.toggle('bx-x')
-    navbar.classList.toggle('active')
-}
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle('bx-x');
+  navbar.classList.toggle('active');
+};
 
 // Tugma elementi
 const backToTopButton = document.getElementById('backToTop');
@@ -58,11 +84,11 @@ backToTopButton.addEventListener('click', () => {
 
 new WOW().init();
 new WOW({
-  boxClass: 'wow',       
-  animateClass: 'animate__animated', 
-  offset: 80,      
-  mobile: true,       
-  live: true             
+  boxClass: 'wow',
+  animateClass: 'animate__animated',
+  offset: 80,
+  mobile: true,
+  live: true
 }).init();
 
 // Scroll foizini aniqlash va animatsiyani faollashtirish
@@ -71,10 +97,10 @@ const handleScroll = () => {
 
   sections.forEach(section => {
     const sectionTop = section.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight * 0.5; 
+    const triggerPoint = window.innerHeight * 0.5;
 
     if (sectionTop < triggerPoint && scrollPercent >= 50) {
-      section.classList.add('show'); 
+      section.classList.add('show');
     }
   });
 };
@@ -82,15 +108,14 @@ const handleScroll = () => {
 // Scroll va yuklanish hodisalari
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);
+
 // ------------------------------------------//
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   const loaderWrapper = document.querySelector('.loader-wrapper');
   const content = document.querySelector('.content');
 
   // Loader tugagach, sahifa tarkibini ko'rsatish
-  loaderWrapper.addEventListener('animationend', function() {
-    loaderWrapper.style.display = 'none'; 
-    // content.classList.add('show'); 
+  loaderWrapper.addEventListener('animationend', function () {
+    loaderWrapper.style.display = 'none';
   });
 });
-
