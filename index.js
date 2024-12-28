@@ -16,7 +16,11 @@ const bgImages = [
   'url("/assets/img/namoz vaqtlari.png")',
   'url("/assets/img/movies.png")',
   'url("/assets/img/todo-app.png")',
-  'url("/assets/img/next-store.png")'
+  'url("/assets/img/next-store.png")',
+  'url("/assets/img/SpaceR.jpg")',
+  'url("/assets/img/burger777.png")'
+
+
 ];
 
 // Har bir kartaga fon rasmini qo‘llash
