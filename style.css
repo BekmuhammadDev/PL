@@ -525,6 +525,26 @@ span {
     margin-bottom: 10px;
     z-index: 20;
   }
+
+  .icons{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  #html{
+     font-size: 46px;
+  }
+
+  #react{
+    font-size: 46px;
+  }
+  #javascript{
+    font-size: 46px;
+  }
+  #css{
+    font-size: 46px;
+  }
   
   .card-description {
     font-size: 26px;
@@ -537,7 +557,9 @@ span {
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    padding: 20px 30px;
+    display: flex;
+    padding: 16px 30px;
+    gap: 10px;
     border-radius: 5px;
     display: inline-block;
     position: absolute;
@@ -553,11 +575,13 @@ span {
   .card:hover .card-button {
     bottom: 20px;
     opacity: 1;
+    display: flex;
   }
   
   .card-button:hover {
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
     color: #000;
+    display: flex;
   }
 /* ////////////////////////////////////////////////// */
 
