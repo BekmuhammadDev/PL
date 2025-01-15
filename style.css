@@ -434,10 +434,22 @@ span {
 }
 
 .services {
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     color: black;
 }
+.services h1{
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+    color: white;
+ }
 
+ .skills{
+    margin: 5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12rem;
+ }
 .services h2 {
     margin-bottom: 5rem;
     color: white;
@@ -558,9 +570,9 @@ span {
     color: #fff;
     text-decoration: none;
     display: flex;
-    padding: 16px 30px;
+    padding: 10px 30px;
     gap: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     display: inline-block;
     position: absolute;
     bottom: -50px;
@@ -586,7 +598,7 @@ span {
 /* ////////////////////////////////////////////////// */
 
 .testimonials {
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .testimonials-box {
