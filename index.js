@@ -3,6 +3,8 @@ const cards = document.querySelectorAll('.card');
 
 // Har bir kartaga turli xil fon rasmlari
 const bgImages = [
+  'url("./assets/img/valute.png")',
+  'url("./assets/img/gif.app.png")',
   'url("./assets/img/WeatherApp.png")',
   'url("./assets/img/exploreasia.png")',
   'url("./assets/img/wonderful-island.png")',
