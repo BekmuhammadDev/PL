@@ -8,6 +8,14 @@
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
 }
+spline-viewer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
 
 :root {
     --bg-color: #080808;
@@ -111,6 +119,7 @@ span {
     margin-bottom: 2rem;
     margin-top: 1rem;
     font-size: 3.5rem;
+    color: #ffffff;
 }
 
 .home-content h1 {
@@ -237,6 +246,7 @@ span {
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
+    background-color: inherit;
 }
 
 .text-animation span {

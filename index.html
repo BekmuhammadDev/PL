@@ -12,6 +12,9 @@
     <!-- WOW.js va Animate.css fayllarini ulash -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- --hover man ---------------------------------- -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.76/build/spline-viewer.js"></script>
+    <!-- ------------------------------------------------------------------------------------------------ -->
 
 </head>
 
@@ -39,30 +42,13 @@
     </header>
 
     <section class="home wow animate__animated animate__fadeInLeft" id="home">
-        <div class="home-content">
+      
 
-            <h1>Hi, It's <span>Bekmuhammad</span></h1>
-            <h3 class="text-animation "> I'm a <span></span></h3>
-            <p i>
-                Hello, my name is Bekmuhammad. I am a Frontend Developer. I have been interested in programming since
-                2021. I love programming and learning new technologies gives me pleasure.I love solving problems and
-                working on interesting projects.
-            </p>
-
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/feed/"><i class='bx bxl-linkedin-square'></i></a>
-                <a href="https://github.com/BekmuhammadDev"><i class='bx bxl-github'></i></a>
-                <a href="https://app.netlify.com/teams/bekmuhammaddev/sites"><i class='bx bxl-netlify'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-            </div>
-
-            <div class="cvbtn">
-                <button id="downloadCv">Download CV</button>
-            </div>
-        </div>
-
-        <div class="home-img">
+        <!-- <div class="home-img">
             <img src="./assets//img/bg-img.jpg" alt="#">
+        </div> -->
+        <div>
+            <spline-viewer url="https://prod.spline.design/2LUyN3Sb4xJpQYFg/scene.splinecode"></spline-viewer>
         </div>
 
         <button id="backToTop"><i class='bx bx-up-arrow-alt'></i></button>
@@ -84,19 +70,22 @@
           <img src="./assets/skills/Tailwind.svg" class="wow animate__animated animate__fadeInRight" alt="">
         </div>
 
-        <h2 class="heading">Projects</h2>
-
         <div class="services-container">
 
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Frontend Developer</h4>
-                    <p>As a frontend developer, I create creative and functional web projects. My projects are built on
-                        modern technologies, each of them has a simple and beautiful design, optimized functionality,
-                        and excellent performance on all devices. For example, the "Zet Market" admin panel provides
-                        convenience for managing products and users, the car rental website allows customers to search
-                        and book cars, the testimonials section has a dynamic design to display customer feedback, and
-                        the React star rating system is designed to display real ratings.</p>
+            <div class="home-content">
+
+                <h1>Hi, It's <span>Bekmuhammad</span></h1>
+                <h3 class="text-animation"> I'm a <span></span></h3>
+    
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/feed/"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://github.com/BekmuhammadDev"><i class='bx bxl-github'></i></a>
+                    <a href="https://app.netlify.com/teams/bekmuhammaddev/sites"><i class='bx bxl-netlify'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                </div>
+    
+                <div class="cvbtn">
+                    <button id="downloadCv">Download CV</button>
                 </div>
             </div>
 
